@@ -7,6 +7,16 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Session03_Day08_maven Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	<!-- =================================================================== -->
+	<properties>
+        <!-- 统一源码的编码方式 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 统一各个框架版本 -->
+        <struts.version>2.5.10</struts.version>
+        <spring.version>4.3.8.RELEASE</spring.version>
+        <hibernate.version>5.1.7.Final</hibernate.version>
+    </properties>
+    <!-- =================================================================== -->
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -15,55 +25,45 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- servlet -->
-		<!-- Servlet -->
+		<!-- https://mvnrepository.com/artifact/taglibs/standard -->
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<!--jsp相关 -->
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>javax.servlet-api</artifactId> 
+			<version>3.0.1</version> <scope>provided</scope> </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>javax.servlet.jsp-api</artifactId>
-			<version>2.3.1</version>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
-			<scope>provided</scope>
 		</dependency>
+		<!-- spring配置 -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
-			<groupId>com.sun.el</groupId>
-			<artifactId>el-ri</artifactId>
-			<version>1.0</version>
-			<scope>provided</scope>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.3.12.RELEASE</version>
 		</dependency>
-		<!-- jsp相关依赖 -->
-		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>jstl</artifactId> 
-			<version>1.2</version> </dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
-		<!-- <dependency> <groupId>javax.servlet.jsp</groupId> <artifactId>javax.servlet.jsp-api</artifactId> 
-			<version>2.3.1</version> <scope>provided</scope> </dependency> -->
-
-
-		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>javax.servlet-api</artifactId> 
-			<version>3.1.0</version> <scope>provided</scope> </dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/javax.el/javax.el-api -->
-		<!-- <dependency> <groupId>javax.el</groupId> <artifactId>javax.el-api</artifactId> 
-			<version>2.2.4</version> </dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/javax.el/javax.el-api -->
-		<dependency>
-			<groupId>javax.el</groupId>
-			<artifactId>javax.el-api</artifactId>
-			<version>3.0.0</version>
-		</dependency>
-
 
 
 	</dependencies>
